@@ -533,12 +533,15 @@ button:focus-visible {
 
 .founder-image {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .founder-img-wrapper {
-  aspect-ratio: 3/4;
+  width: min(200px, 100%);
+  aspect-ratio: 1 / 1;
   background: var(--navy-mid);
-  border-radius: 2px;
+  border-radius: 8px;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -546,12 +549,12 @@ button:focus-visible {
   justify-content: center;
 }
 
-.founder-img-wrapper .initials {
-  font-family: var(--serif);
-  font-size: 6rem;
-  font-weight: 300;
-  color: rgba(245, 240, 234, 0.08);
-  letter-spacing: 0.05em;
+.founder-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
 }
 
 .founder-accent {
@@ -862,7 +865,7 @@ footer {
   
   .founder { padding: 5rem 1.5rem; }
   .founder-inner { grid-template-columns: 1fr; gap: 3rem; }
-  .founder-img-wrapper { aspect-ratio: 4/3; max-width: 400px; }
+  .founder-img-wrapper { width: 200px; }
   .founder-accent { display: none; }
   
   .cta { padding: 5rem 1.5rem; }
@@ -1003,7 +1006,7 @@ footer {
   <div class="founder-inner">
     <div class="founder-image reveal">
       <div class="founder-img-wrapper">
-        <div class="initials">HM</div>
+        <img class="founder-photo" src="images/hilary-malecha-headshot.jpeg" alt="Hilary Malecha headshot" width="200" height="200" loading="lazy" decoding="async">
       </div>
       <div class="founder-accent"></div>
     </div>
